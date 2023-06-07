@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 const App = () => {
-  const [input, setInput] = useState(""); //รับค่าinput 
-  const [errorMessage, setErrorMessage] = useState(""); //ข้อมูล error 
+  const [input, setInput] = useState<string>(""); //รับค่าinput 
+  const [errorMessage, setErrorMessage] = useState<string>(""); //ข้อมูล error 
   const [openParenthesis, setOpenParenthesis] = useState<number[]>([]); //เก็บตำเเหน่งวงเล็บเปิดที่ต้องใส่
   const [closeParenthesis, setCloseParenthesis] = useState<number[]>([]); //เก็บตำเเหน่งวงเล็บปิดที่ต้องใส่
-  const [countOpen, setCountOpen] = useState(0); //นับตัวที่ต้องเพิ่มวงเล็บเปิด
-  const [countClose, setCountClose] = useState(0); //นับตัวที่ต้องเพิ่มวงเล็บปิด
-  const [checkLength, setcheckLength] = useState(false); //เงื่อนไขสถานะ ถ้าเข้าเงื่อนไข error จะไม่เเสดงผลลัพธ์ ถ้าไม่เข้าก็เเสดงผลลัพธ์
+  const [countOpen, setCountOpen] = useState<number>(0); //นับตัวที่ต้องเพิ่มวงเล็บเปิด
+  const [countClose, setCountClose] = useState<number>(0); //นับตัวที่ต้องเพิ่มวงเล็บปิด
+  const [checkLength, setcheckLength] = useState<boolean>(false); //เงื่อนไขสถานะ ถ้าเข้าเงื่อนไข error จะไม่เเสดงผลลัพธ์ ถ้าไม่เข้าก็เเสดงผลลัพธ์
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => { //ฟังก์ชั่นhandle การรับข้อมูลเข้ามาเก็บใน state
     const inputValue = event.target.value;
     setInput(inputValue);
