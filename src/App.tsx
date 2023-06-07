@@ -15,7 +15,9 @@ const App = () => {
   };
 
   const checkParentheses = () => { //ฟังก์ชั่นหาผลลัพธ์
+    console.log("input:", input.length);
     if (input.length === 0) { //เมื่อไม่ได้กรอกอะไรเเล้วกดปุ่มตรวจสอบ
+      setErrorMessage("");
       setCountOpen(0);
       setCountClose(0);
       setOpenParenthesis([]);
